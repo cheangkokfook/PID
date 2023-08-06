@@ -7,7 +7,6 @@ let integral = 0
 let previousError = 0
 let error = 0
 let derivative = 0
-let output = 0
 
 //% block="setPIDConstants $proportional $integralConstant $derivative"
 export function setPIDConstants (proportional: number, integralConstant: number, derivative: number): void {
@@ -22,8 +21,8 @@ export function resetPID (): void {
     previousError = 0
 }
 
-//% block="computePID $setPoint $measuredValue"
-export function computePID (setPoint: number, measuredValue: number): void {
+//% block="computePID $setPoint $measuredValue $output"
+export function computePID (setPoint: number, measuredValue: number, output: number): void {
     error = setPoint - measuredValue
     integral += error
     derivative = error - previousError
