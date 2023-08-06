@@ -1,3 +1,14 @@
+/**
+* makecode PID package for microbit.
+* From students to learn PID concept.
+* http://www.meekids.club
+*/
+
+/**
+ * Custom blocks
+ */
+//% weight=20 color=#0fbc10
+
 namespace PID {
 
 let Kp = 0
@@ -8,7 +19,7 @@ let previousError = 0
 let error = 0
 let derivative = 0
 
-//% block="setPIDConstants $proportional $integralConstant $derivative"
+//% block="setPIDConstants Kp$proportional Ki$integralConstant Kd$derivative"
 export function setPIDConstants (proportional: number, integralConstant: number, derivative: number): void {
     Kp = proportional
     Ki = integralConstant
