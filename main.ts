@@ -15,10 +15,14 @@ export function setPIDConstants (proportional: number, integralConstant: number,
     Ki = integralConstant
     Kd = derivative
 }
+
+//% block="resetPID"
 export function resetPID () {
     integral = 0
     previousError = 0
 }
+
+//% block="computePID"
 export function computePID (setPoint: number, measuredValue: number) {
     error = setPoint - measuredValue
     integral += error
