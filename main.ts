@@ -8,6 +8,8 @@ let previousError = 0
 let error = 0
 let derivative = 0
 let output = 0
+
+//% block="setPIDConstants $proportional"
 export function setPIDConstants (proportional: number, integralConstant: number, derivative: number) {
     Kp = proportional
     Ki = integralConstant
