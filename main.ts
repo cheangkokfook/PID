@@ -21,12 +21,12 @@ export function resetPID (): void {
     previousError = 0
 }
 
-//% block="computePID $setPoint $measuredValue $output"
-export function computePID (setPoint: number, measuredValue: number, output: number): void {
+//% block="computePID $setPoint $measuredValue"
+export function computePID (setPoint: number, measuredValue: number): number {
     error = setPoint - measuredValue
     integral += error
     derivative = error - previousError
-    output = Kp * error + Ki * integral + Kd * derivative
+    return Kp * error + Ki * integral + Kd * derivative
     previousError = error
 }
 
