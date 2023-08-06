@@ -8,16 +8,16 @@ let previousError = 0
 let error = 0
 let derivative = 0
 let output = 0
-function setPIDConstants (proportional: number, integralConstant: number, derivative: number) {
+export function setPIDConstants (proportional: number, integralConstant: number, derivative: number) {
     Kp = proportional
     Ki = integralConstant
     Kd = derivative
 }
-function resetPID () {
+export function resetPID () {
     integral = 0
     previousError = 0
 }
-function computePID (setPoint: number, measuredValue: number) {
+export function computePID (setPoint: number, measuredValue: number) {
     error = setPoint - measuredValue
     integral += error
     derivative = error - previousError
