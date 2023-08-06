@@ -1,3 +1,5 @@
+namespace PID {
+
 let Kp = 0
 let Ki = 0
 let Kd = 0
@@ -21,4 +23,6 @@ function computePID (setPoint: number, measuredValue: number) {
     derivative = error - previousError
     output = Kp * error + Ki * integral + Kd * derivative
     previousError = error
+}
+
 }
