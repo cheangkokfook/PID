@@ -42,3 +42,7 @@ export function computePID (setPoint: number, measuredValue: number): number {
 }
 
 }
+
+namespace others {
+    
+}
