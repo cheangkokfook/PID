@@ -17,16 +17,13 @@ export function setPIDConstants (proportional: number, integralConstant: number,
 }
 
 //% block="resetPID"
-export function resetPID () {
+export function resetPID (): void {
     integral = 0
     previousError = 0
 }
 
-let setPoint = 0
-let measuredValue = 0
-
 //% block="computePID $setPoint $measuredValue"
-export function computePID (setPoint: number, measuredValue: number) {
+export function computePID (setPoint: number, measuredValue: number): void {
     error = setPoint - measuredValue
     integral += error
     derivative = error - previousError
