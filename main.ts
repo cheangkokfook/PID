@@ -22,7 +22,7 @@ export function resetPID () {
     previousError = 0
 }
 
-//% block="computePID $setPoint $measureValue"
+//% block="computePID $setPointmeasureValue"
 export function computePID (setPoint: number, measuredValue: number) {
     error = setPoint - measuredValue
     integral += error
