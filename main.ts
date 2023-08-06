@@ -10,7 +10,7 @@ let derivative = 0
 let output = 0
 
 //% block="setPIDConstants $proportional $integralConstant $derivative"
-export function setPIDConstants (proportional: number, integralConstant: number, derivative: number) {
+export function setPIDConstants (proportional: number, integralConstant: number, derivative: number): void {
     Kp = proportional
     Ki = integralConstant
     Kd = derivative
