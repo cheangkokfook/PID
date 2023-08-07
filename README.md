@@ -10,6 +10,10 @@ This repository can be added as an **extension** in MakeCode.
 * click on **Extensions** under the gearwheel menu
 * search for **https://github.com/cheangkokfook/pid** and import
 
+## Demo
+
+![](demo.jpg)
+
 ## Edit this project
 
 To edit this repository in MakeCode.
