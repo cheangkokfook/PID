@@ -11,9 +11,9 @@
 
 namespace PID {
 
-    let Kp = 0
-    let Ki = 0
-    let Kd = 0
+    let Kp = 1
+    let Ki = 0.1
+    let Kd = 0.01
     let integral = 0
     let previousError = 0
     let error = 0
