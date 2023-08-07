@@ -9,7 +9,7 @@
  */
 //% weight=20 color=#0fbc10
 
-namespace PID {
+namespace Mee_PID {
 
     let Kp = 1
     let Ki = 0.1
