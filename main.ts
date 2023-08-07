@@ -20,7 +20,7 @@ namespace PID {
     let derivative = 0
 
     /**
-    * Setting PID tuning value, Kp is proportional, Ki is integral, Kd is derivative
+    * Setting PID value, suggest init value (1, 0.1, 0.01), Kp is proportional, Ki is integral, Kd is derivative
     */
     //% block="setPID Kp$proportional Ki$integralConstant Kd$derivative"
     //% weight=90
@@ -45,16 +45,4 @@ namespace PID {
         previousError = error
     }
 
-}
-
-namespace I2C_LCD1620 {
-
-    /**
-    * turn on LCD
-    */
-    //% block="turn on LCD"
-    //% weight=81 blockGap=8
-    export function on(): void {
-        //cmd(0x0C)
-    }
 }
