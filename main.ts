@@ -31,12 +31,14 @@ namespace Mee_PID {
     }
 
     //% block="resetPID"
+    //% weight=80
     export function resetPID (): void {
         integral = 0
         previousError = 0
     }
 
-    //% block="computePID $setPoint $measuredValue"
+    //% block="computePID setPoint$setPoint measureValue$measuredValue"
+    //% weight=85
     export function computePID (setPoint: number, measuredValue: number): number {
         error = setPoint - measuredValue
         integral += error
